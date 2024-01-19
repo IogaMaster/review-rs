@@ -4,5 +4,5 @@ version = "1.0.0"
 edition = "2021"
 
 [dependencies]
-reqwest = "0.11.23"
-# example = "1.0.0"
+octocrab = "0.33.1"
+tokio = { version = "1.35.1", features = ["full"] }
