@@ -24,9 +24,13 @@
         nativeBuildInputs = with pkgs; [
           rust-bin.stable.latest.default
           rust-analyzer
+
+          pkg-config
         ];
 
-        buildInputs = with pkgs; [];
+        buildInputs = with pkgs; [
+            openssl
+        ];
       in {
         devShells.default = pkgs.mkShell {inherit nativeBuildInputs buildInputs;};
 
